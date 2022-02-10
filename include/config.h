@@ -1,5 +1,5 @@
 /* -------------------------------------------------------------------------------
-Jeeves.Base - main.cpp
+Jeeves.Base - config.h
 
 MIT License
 
@@ -24,4 +24,11 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ------------------------------------------------------------------------------- */
 
-#include <base.h>
+#define    USE_WIFI             true
+#define    USE_MQTT             true
+
+// --- WIFI
+
+// --- MQTT
+#define    MQTT_HOST            "jeeves"
+#define    MQTT_PORT            8080

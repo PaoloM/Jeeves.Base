@@ -1,5 +1,5 @@
 /* -------------------------------------------------------------------------------
-Jeeves.Base - main.cpp
+Jeeves.Base - base.h
 
 MIT License
 
@@ -24,4 +24,23 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ------------------------------------------------------------------------------- */
 
-#include <base.h>
+#ifndef JeevesBase_h // include only once
+#define JeevesBase_h
+
+// --- Framework includes
+#include <Arduino.h>
+
+// --- Function signatures
+bool initWifi();
+void reconnectMqtt();
+
+void mqttCallback(char *topic, byte *payload, uint8_t length);
+void sensorReportToMqtt(bool emitTimestamp);
+void sensorReportToSerial();
+void sensorUpdateReadings();
+void sensorUpdateReadingsQuick();
+void sensorUpdateDisplay();
+void sensorSetup();
+void sensorMqttSetup();
+
+#endif

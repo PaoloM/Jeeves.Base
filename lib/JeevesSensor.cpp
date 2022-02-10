@@ -1,5 +1,5 @@
 /* -------------------------------------------------------------------------------
-Jeeves.Base - main.cpp
+Jeeves.Base - JeevesSensor.cpp
 
 MIT License
 
@@ -24,4 +24,28 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ------------------------------------------------------------------------------- */
 
-#include <base.h>
+#include "JeevesSensor.h"
+
+#include <iostream>
+
+using namespace std;
+
+class JeevesSensor
+{
+    public:
+        JeevesSensor();
+        ~JeevesSensor();
+
+        void sendMQTT();
+        void sendSerial();
+
+        char sensorName[20];
+
+};
+
+class MQTTmessage
+{
+    public:
+        MQTTmessage();
+        ~MQTTmessage();
+};
